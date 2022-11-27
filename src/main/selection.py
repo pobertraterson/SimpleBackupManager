@@ -18,3 +18,9 @@ def driveSelection():
                 break
             else:
                 continue
+    selection = {
+        "location": drive,
+    }
+    jsonDump=json.dumps(selection)
+    with open("backupPrep.json","w") as outfile:
+        json.dump(selection, outfile)
